@@ -1,0 +1,57 @@
+{
+  "name": "dump1090-sdk",
+  "version": "0.1.0",
+  "description": "Typed client library for the dump1090/readsb HTTP API (aircraft.json, receiver.json, stats.json, history and the readsb query API).",
+  "keywords": [
+    "ads-b",
+    "dump1090",
+    "readsb",
+    "mode-s",
+    "aircraft",
+    "adsb",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "technothatch",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technothatch/dump1090-sdk.git"
+  },
+  "homepage": "https://github.com/technothatch/dump1090-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/technothatch/dump1090-sdk/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --deny-warnings src tests vitest.config.ts",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@vitest/coverage-v8": "^5.0.3",
+    "oxlint": "^1.86.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
